@@ -1,17 +1,46 @@
-# [Your Name] | Personal Portfolio
+# Sarthakk Mukherji | Personal Portfolio
 
 A one-page personal portfolio with a football theme, styled in Portugal's kit colours (green, red and gold) as a tribute to Cristiano Ronaldo.
 
-**Live site:** https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/
+**Live site:** https://sarthakk2424.github.io/YOUR-REPO-NAME/
+
+## About me
+
+I’m Sarthakk Mukherji, a third-year student at NMIMS MPSTME, based in Mumbai, India. I’m interested in Python, statistics, data analysis and fintech, with a strong focus on equity management, shares, IPOs and financial markets.
+
+I was part of the Sports Committee in college and served as Sports Captain in school. I enjoy combining analytical thinking with leadership and teamwork.
 
 ## What is inside
 
 - **About me:** short bio and quick facts
-- **Skills:** languages, tools and strengths
-- **Projects:** what I have built, with code and demo links
-- **Education and experience:** timeline
+- **Skills:** Python, statistics, data analysis, Git/GitHub, Excel and financial research
+- **Projects:** machine-learning, multi-agent and finance projects
+- **Education and experience:** NMIMS MPSTME, Manav Rachna International School, Sports Committee and Sports Captain role
 - **Fan corner:** a few CR7 highlights
 - **Contact:** email, GitHub and LinkedIn
+
+## Projects
+
+### IPL 2025 Batters & Bowlers ML Analysis
+An end-to-end machine-learning project analysing IPL 2025 player performance. Built regression, classification, neural-network and clustering models using Python, Pandas, NumPy, Scikit-learn, TensorFlow/Keras and Matplotlib.
+
+### Multi-Agent Football Strategy System
+A two-agent football tactics system where an Analyst Agent studies opponents and a Coach Agent chooses formations and strategies. Built using Python, object-oriented programming, multi-agent communication, Pandas, NumPy and Matplotlib.
+
+### Equity & IPO Research Tracker
+A personal finance project focused on tracking shares, IPOs and equity-market research, combining data analysis with an interest in equity management and financial markets.
+
+## Skills
+
+- Python
+- Statistics
+- Data Analysis
+- Git and GitHub
+- Excel
+- Financial Research
+- Equity Management
+- Shares and IPOs
+- Leadership and Sports
 
 ## Built with
 
@@ -27,7 +56,7 @@ A one-page personal portfolio with a football theme, styled in Portugal's kit co
 
 ## Project structure
 
-```
+```text
 .
 ├── index.html   # the whole website (content, styles and a tiny script)
 └── README.md    # this file
@@ -41,9 +70,10 @@ Open `index.html` and edit the values at the top of the `<style>` section:
 :root{--pitch:#0A4A32; --red:#C8102E; --gold:#FFCB05; ...}
 ```
 
-For Real Madrid colours, try white `#FFFFFF`, navy `#00529F` and gold `#FEBE10`.
-
 ## Author
 
-[Your Name]: [Course, College]
-GitHub: https://github.com/YOUR-USERNAME
+**Sarthakk Mukherji**  
+Third-year student, NMIMS MPSTME  
+Email: sarthakmukherji2@gmail.com  
+GitHub: https://github.com/Sarthakk2424  
+LinkedIn: https://www.linkedin.com/in/Sarthakk Mukherji
