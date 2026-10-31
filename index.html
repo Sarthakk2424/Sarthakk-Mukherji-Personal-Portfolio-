@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ✏️ EDIT 1: page title and description (shown in the browser tab and Google) -->
+<title>[Your Name] | Portfolio</title>
+<meta name="description" content="Personal portfolio of [Your Name]: projects, skills and background.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@600;800&display=swap" rel="stylesheet">
+<style>
+/* Colours: Portugal kit. Change them here and the whole page updates. */
+:root{--pitch:#0A4A32;--deep:#06301F;--green:#046A38;--red:#C8102E;--gold:#FFCB05;--chalk:#F2F5EF;--ink:#10201A;--line:rgba(255,255,255,.22)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font:17px/1.65 "Barlow",system-ui,sans-serif;color:var(--ink);background:var(--chalk)}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:5;background:var(--deep);border-bottom:3px solid var(--red)}
+nav .wrap{display:flex;gap:6px 22px;flex-wrap:wrap;align-items:center;padding-top:10px;padding-bottom:10px}
+nav a{color:#fff;text-decoration:none;font-weight:600;font-size:15px}
+nav a:hover{color:var(--gold)}
+nav .brand{font:800 22px "Barlow Condensed",sans-serif;color:var(--gold);margin-right:auto}
+.hero{position:relative;overflow:hidden;background:var(--pitch);color:#fff;padding:96px 0 112px}
+.hero::before{content:"";position:absolute;right:-120px;top:50%;width:520px;height:520px;border:3px solid var(--line);border-radius:50%;transform:translateY(-50%)}
+.hero::after{content:"";position:absolute;right:138px;top:0;bottom:0;width:3px;background:var(--line)}
+.shirt{position:absolute;right:30px;bottom:-50px;z-index:1;font:800 360px/1 "Barlow Condensed",sans-serif;color:transparent;-webkit-text-stroke:3px var(--gold);user-select:none}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(56px,11vw,128px);font-weight:800}
+.role{color:var(--gold);font:600 26px "Barlow Condensed",sans-serif;margin:14px 0 8px}
+.hero p{max-width:34em;margin:0 0 28px}
+.btn{display:inline-block;padding:12px 22px;margin:0 12px 10px 0;background:var(--red);color:#fff;text-decoration:none;font-weight:600;border-radius:4px;border:2px solid var(--red)}
+.btn.ghost{background:none;border-color:#fff}
+.btn:hover{background:#fff;color:var(--red);border-color:#fff}
+section{padding:72px 0}
+h2{font-size:46px;font-weight:800;color:var(--deep);margin-bottom:34px}
+h2::after{content:"";display:block;width:70px;height:7px;margin-top:12px;background:linear-gradient(90deg,var(--green) 40%,var(--red) 40%)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:48px}
+dl{margin:0}
+dl div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #c9d3c8}
+dt{font-weight:600}dd{margin:0;text-align:right}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{padding:4px 12px;border:1.5px solid var(--green);border-radius:99px;font-size:15px;background:#fff}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:36px}
+.skills h3{font-size:28px;margin-bottom:12px;color:var(--green)}
+.results{list-style:none;margin:0;padding:0}
+.results li{display:grid;grid-template-columns:1fr auto;gap:8px 24px;align-items:start;background:#fff;border-left:7px solid var(--red);padding:22px 24px;margin-bottom:16px}
+.results h3{font-size:30px}
+.results p{margin:6px 0 12px}
+.results .links{display:flex;flex-direction:column;gap:6px;font-weight:600}
+.results .links a{color:var(--green)}
+.career{list-style:none;margin:0;padding:0}
+.career li{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid #c9d3c8}
+.career .yrs{font:800 26px "Barlow Condensed",sans-serif;color:var(--red)}
+.career h3{font-size:26px}.career p{margin:4px 0 0}
+.fan{background:var(--deep);color:#fff}
+.fan h2{color:#fff}
+.fan ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px}
+.fan strong{display:block;font:800 64px/1 "Barlow Condensed",sans-serif;color:var(--gold)}
+.contact ul{list-style:none;margin:0;padding:0;font-size:20px}
+.contact li{padding:6px 0}
+.contact a{color:var(--green);font-weight:600}
+footer{background:var(--pitch);color:#fff;text-align:center;padding:26px 24px;font-size:15px}
+@media (max-width:760px){
+ .about{grid-template-columns:1fr}
+ .shirt{font-size:220px;right:-10px;opacity:.5}
+ .hero::after{right:98px}
+ .results li{grid-template-columns:1fr}
+ .career li{grid-template-columns:1fr;gap:2px}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <!-- ✏️ EDIT 2: your initials or short name for the top bar -->
+    <span class="brand">[Initials]</span>
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#career">Career</a><a href="#fan">Fan corner</a><a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="shirt" aria-hidden="true">7</div>
+  <div class="wrap">
+    <!-- ✏️ EDIT 3: your full name, your role/course, and a one-line intro -->
+    <h1>[Your Name]</h1>
+    <p class="role">[Your course or role, e.g. Computer Science student]</p>
+    <p>[One or two sentences about what you do and what you are looking for.]</p>
+    <a class="btn" href="#projects">See my projects</a>
+    <a class="btn ghost" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2>About me</h2>
+      <!-- ✏️ EDIT 4a: write 2 short paragraphs about yourself -->
+      <p>[Paragraph 1: who you are, what you study or do, what you enjoy building.]</p>
+      <p>[Paragraph 2: your goals, interests and what drives you.]</p>
+      <!-- Optional photo: put your photo in the repo as me.jpg, then remove the comment marks around the next line
+      <img src="me.jpg" alt="Photo of [Your Name]" width="220">
+      -->
+    </div>
+    <!-- ✏️ EDIT 4b: quick facts. Change the right-hand side of each row. Add or delete rows freely. -->
+    <dl>
+      <div><dt>Name</dt><dd>[Your Name]</dd></div>
+      <div><dt>Studying</dt><dd>[Course, college]</dd></div>
+      <div><dt>Based in</dt><dd>[City, Country]</dd></div>
+      <div><dt>Learning now</dt><dd>[Topic]</dd></div>
+      <div><dt>Favourite player</dt><dd>Cristiano Ronaldo</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="skills" style="background:#fff">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <!-- ✏️ EDIT 5: replace each [Skill] with a real skill. To add one, copy a whole <li>...</li> line. -->
+    <div class="skills">
+      <div><h3>Languages</h3><ul class="chips"><li>[Skill]</li><li>[Skill]</li><li>[Skill]</li></ul></div>
+      <div><h3>Tools</h3><ul class="chips"><li>Git and GitHub</li><li>[Skill]</li><li>[Skill]</li></ul></div>
+      <div><h3>Strengths</h3><ul class="chips"><li>[Skill]</li><li>[Skill]</li><li>[Skill]</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <!-- ✏️ EDIT 6: one block per project. To add another, copy from <li> to </li> and paste below the last one. To remove, delete the whole block. -->
+    <ul class="results">
+      <li>
+        <div>
+          <h3>[Project name]</h3>
+          <p>[What it does and what you built, in 1 to 2 sentences.]</p>
+          <ul class="chips"><li>[Tech]</li><li>[Tech]</li></ul>
+        </div>
+        <div class="links"><a href="#">Code on GitHub</a><a href="#">Live demo</a></div>
+      </li>
+      <li>
+        <div>
+          <h3>[Project name]</h3>
+          <p>[What it does and what you built, in 1 to 2 sentences.]</p>
+          <ul class="chips"><li>[Tech]</li><li>[Tech]</li></ul>
+        </div>
+        <div class="links"><a href="#">Code on GitHub</a><a href="#">Live demo</a></div>
+      </li>
+      <li>
+        <div>
+          <h3>[Project name]</h3>
+          <p>[What it does and what you built, in 1 to 2 sentences.]</p>
+          <ul class="chips"><li>[Tech]</li><li>[Tech]</li></ul>
+        </div>
+        <div class="links"><a href="#">Code on GitHub</a><a href="#">Live demo</a></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="career" style="background:#fff">
+  <div class="wrap">
+    <h2>Education and experience</h2>
+    <!-- ✏️ EDIT 7: newest first. Copy a <li> block to add more. -->
+    <ul class="career">
+      <li><span class="yrs">[Year to Year]</span><div><h3>[Degree or role]</h3><p>[School or company, plus one line on what you did or learned.]</p></div></li>
+      <li><span class="yrs">[Year to Year]</span><div><h3>[Degree or role]</h3><p>[School or company, plus one line on what you did or learned.]</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section id="fan" class="fan">
+  <div class="wrap">
+    <h2>Fan corner: CR7</h2>
+    <ul>
+      <li><strong>450</strong>goals in 438 games for Real Madrid, the club’s all-time top scorer.</li>
+      <li><strong>4</strong>Champions League titles with Real Madrid: 2014, 2016, 2017 and 2018.</li>
+      <li><strong>2016</strong>European Championship won with Portugal.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <!-- ✏️ EDIT 8: replace the email and the two profile links. Keep the https:// at the start of links. -->
+    <ul>
+      <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+      <li>GitHub: <a href="https://github.com/YOUR-USERNAME">github.com/YOUR-USERNAME</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/YOUR-PROFILE">linkedin.com/in/YOUR-PROFILE</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <!-- ✏️ EDIT 9: your name in the footer -->
+  © <span id="yr">2026</span> [Your Name]. Built with HTML and CSS. Hala Madrid and Força Portugal.
+</footer>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+</body>
+</html>
